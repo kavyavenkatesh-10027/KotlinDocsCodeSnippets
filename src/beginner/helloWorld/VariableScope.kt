@@ -81,5 +81,32 @@ class MathUtil {
 println(MathUtil.VERSION)
  */
 /**
-E. Companion Object Properties
+E. Companion Object properties
+-One copy shared by all objects.
+-Kotlin's replacement for many Java static fields.
  **/
+
+
+
+object Database {
+    var connected = false
+}
+/**
+F. Object properties(Singleton)
+-Only one instance of the object exists
+-One object is shared across the entire application
+ **/
+
+
+
+val String.lastChar: Char
+    get() = this[length - 1]
+/*
+println("Hello".lastChar)
+ */
+/**
+G. Extension properties
+-Kotlin lets you define a property for an existing type.
+-It does not have backing fields and value must be computed
+ from the logic inside getter
+ */
