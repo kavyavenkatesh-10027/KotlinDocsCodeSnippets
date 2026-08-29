@@ -8,6 +8,7 @@ fun main() {
     defaultFloatingTypeInference()
     arithmeticOperants()
     typeConversions()
+    mixedNumericalExpressions()
     dataOverflow()
     bitwiseOperations()
     floatingPointNumberOperants()
