@@ -339,7 +339,6 @@ fun bitwiseOperations() {
     xor() – bitwise XOR
 
     inv() – bitwise inversion
-
      */
 
     val a = 12      // 1100
