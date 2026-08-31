@@ -53,7 +53,8 @@ fun booleanOperations(){
     val d = true && true  // true
 
     /**
-    note :   If the first operand is false, the && operator skips the second operand. To evaluate both operands, use the and infix function instead.
+    note :   If the first operand is false, the && operator skips the second operand.
+    To evaluate both operands, use the and infix function instead.
     */
 
 
