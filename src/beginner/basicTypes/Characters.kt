@@ -9,39 +9,40 @@ val invalid = 'AB' : Error
 val invalidEmpty = '' : Error
  */
 
-fun unicodeSupport(){
+fun main(){
+    /**
+    A single Char can store values in the range from \u0000 to \uFFFF.
+    This range covers the Basic Multilingual Plane (BMP) that includes
+    characters for almost all modern languages and a large number of symbols.
+     **/
 
-    fun basicMultiLingualPlane() {
+    /*
+To specify a character by the Unicode value, use \u followed by four-digit hexadecimal
+value from the Unicode table:
+ */
 
-        /**
-        A single Char can store values in the range from \u0000 to \uFFFF.
-        This range covers the Basic Multilingual Plane (BMP) that includes
-        characters for almost all modern languages and a large number of symbols.
-         **/
 
-        /*
-    To specify a character by the Unicode value, use \u followed by four-digit hexadecimal
-    value from the Unicode table:
-     */
 
-        val unicodeNumber = '\u0031' // Equals '1'
-    }
 
-    fun supplementaryCharacters() {
+    val unicodeNumber = '\u0031' // Equals '1'
 
-        //Unicode characters outside the BMP, such as emojis and some historic
-        // scripts, cannot be represented by a single Char. In UTF-16, they are encoded as
-        // a surrogate pair, where two Char values together represent one Unicode character
-        // in a String:
 
-    //sampleStart
-        val emoji = "🥦"
+    //Unicode characters outside the BMP, such as emojis and some historic
+    // scripts, cannot be represented by a single Char. In UTF-16, they are encoded as
+    // a surrogate pair, where two Char values together represent one Unicode character
+    // in a String:
 
-        println(emoji.length) // 2
-        println(emoji[0])     // First surrogate
-        println(emoji[1])     // Second surrogate
-    //sampleEnd
-    }
+
+    val emoji = "🥦"
+
+    println(emoji.length) // 2
+    println(emoji[0])     // First surrogate
+    println(emoji[1])     // Second surrogate
+
+    characterComparison()
+    characterProcessing()
+    characterArithmetic()
+    characterConversion()
 }
 
 /**
