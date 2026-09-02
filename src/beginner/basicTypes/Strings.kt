@@ -152,6 +152,7 @@ fun stringTemplates() {
 // For example, if you use $$ before a string literal, interpolation
 // begins only when two consecutive dollar signs ($$) appear.
 
+/*
     val name2 = "Alice"
 
     val text2 = $$"""
@@ -160,6 +161,10 @@ fun stringTemplates() {
     """.trimIndent()
 
     println(text2)
+*/
+    /**
+    multi_dollar_interpolation must be enabled
+    */
 
 // A single $ inside the string is treated as a literal dollar sign
 // and does not start interpolation.
@@ -314,9 +319,9 @@ val hasErrors = true
     Use StringBuffer, if you want to edit an existing value.
  */
     val textSample = "Hello, Kotlin"
-    val builder = StringBuilder(text)
+    val builder = StringBuilder(textSample)
 
-    builder.replace(7, 13, "world")
+    builder.replace(7, 13 , "world")
     println(builder.toString()) //Hello, world
 
 //FORMAT (JVM only)
